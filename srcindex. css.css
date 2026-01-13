@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --emerald: #064e3b;
+    --gold: #d97706;
+    --cream: #fefce8;
+  }
+
+  body {
+    @apply bg-[#fefce8] text-gray-800;
+    font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Bengali typography enhancement */
+  .bn-text {
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 1.8;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-emerald-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-emerald-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-emerald-700;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/70 border border-white/20 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-amber-600 to-yellow-700 bg-clip-text text-transparent;
+  }
+}
